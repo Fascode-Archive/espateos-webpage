@@ -25,9 +25,8 @@
     <meta property="og:url" content="https://hayao819.wp.xdomain.jp/">
     <link rel="canonical" href="https://hayao819.wp.xdomain.jp/">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/m.css">
-  
+
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="/css/ie.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
