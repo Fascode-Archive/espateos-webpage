@@ -197,8 +197,8 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
   text-align:center;
   color:#333
 }
-.main-box3{
-
+.main-box3 {
+  text-align:center
 }
 .main-box3-0{
   vertical-align:top;
@@ -291,14 +291,14 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
     transform:translateX(0vw)
   }
   #gnav-ul{
-    width:67%;
+    width:70%;
     right:0;
     background-color:rgba(0,0,0,0)
   }
   #gnav-ul li{
     box-sizing:border-box;
     display:inline-block;
-    width:16%
+    width:15%
   }
   #visual{
     height:900px;
@@ -312,8 +312,8 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
     display:inline-block;
     height:430px;
     width:30%;
-    padding:0 .5% 2.5%;
-    margin:10% .5%
+    padding:0 0.5% 2.5%;
+    margin:10% 0.4%
   }
   .main-box3-0-title{
     font-size:21px
@@ -331,14 +331,14 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
     transform:translateX(0vw)
   }
   #gnav-ul{
-    width:65%;
+    width:70%;
     right:0;
     background-color:rgba(0,0,0,0)
   }
   #gnav-ul li{
     box-sizing:border-box;
     display:inline-block;
-    width:16%
+    width:15%
   }
   #visual{
     height:900px;
@@ -356,6 +356,6 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
     display:inline-block;
     width:25%;
     height:300px;
-    margin:5% 1.4%
+    margin:5% 1.2%
   }
 }
