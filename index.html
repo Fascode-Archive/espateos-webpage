@@ -27,6 +27,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="m.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/ie.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <header id="head">
@@ -81,7 +86,30 @@
         </section>
       </div>
     </article>
-    <i class="go-top material-icons">expand_less</i>
+    <i id="go-top" class="no-display material-icons" onclick="scrollToTop()">expand_less</i>
     <footer id="foot"><small>&copy; 2019 EspateOS</small></footer>
+    <script type="text/javascript">
+    function scrollToTop() {
+      const me = arguments.callee;
+      const nowY = window.pageYOffset;
+      window.scrollTo(0, Math.floor(nowY * 0.8));
+      if (nowY > 0) {
+        window.setTimeout(me, 10);
+      }
+    }
+    var element = null;
+    window.onscroll = function() {
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+      if (element == null) {
+        element = document.getElementById('go-top');
+      }
+      if (scrollTop / scrollHeight > 0.1) {
+        element.classList.remove('no-display');
+      } else {
+        element.classList.add('no-display');
+      }
+    }
+    </script>
   </body>
 </html>

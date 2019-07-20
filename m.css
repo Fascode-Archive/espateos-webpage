@@ -17,7 +17,9 @@ abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,d
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
 }
-
+.no-display{
+  opacity: 0;
+}
 img{display:block;width:100%;vertical-align:top}
 body{font-family:'Roboto',sans-serif;}
 #gnav-b{
@@ -240,12 +242,12 @@ body{font-family:'Roboto',sans-serif;}
   line-height: 26px;
   color: #333;
 }
-.go-top{
-  display: none;
+#go-top{
   line-height: 48px;
   width: 60px;
   font-size: 48px;
   text-align: center;
+  cursor: pointer;
   position: fixed;
   right: 30px;
   bottom: 0px;
