@@ -287,6 +287,9 @@ body{font-family:'Roboto',sans-serif;}
   #gnav-i{
     display: none;
   }
+  #gnav-b:checked ~ #gnav-ul{
+    transform: translateX(0vw);
+  }
   #gnav-ul{
     width: 65%;
     right: 0;
