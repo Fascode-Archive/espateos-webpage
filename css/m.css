@@ -82,6 +82,7 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
 #gnav-ul{
   background-color:rgba(0,0,0,0.3);
   width:100%;
+  font-size:0;
   position:absolute;
   top:0;
   right:-100vw;
@@ -97,7 +98,7 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
 #gnav-ul li a{
   display:block;
   line-height:80px;
-  font-size:20px;
+  font-size:19px;
   text-decoration:none;
   text-align:center;
   color:#f0f0f0;
@@ -298,7 +299,7 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
   #gnav-ul li{
     box-sizing:border-box;
     display:inline-block;
-    width:15%
+    width:16%
   }
   #visual{
     height:900px;
@@ -338,7 +339,7 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
   #gnav-ul li{
     box-sizing:border-box;
     display:inline-block;
-    width:15%
+    width:16%
   }
   #visual{
     height:900px;
