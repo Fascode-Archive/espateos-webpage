@@ -31,10 +31,22 @@
     <link rel="stylesheet" href="/ie.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">$.debugBGS = true;</script>
+    <script src="/js/jquery.backgroundSize.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+      $("#visual").css( "background-size", "cover" );
+    });
+    </script>
     <![endif]-->
   </head>
   <body>
     <header id="head">
+      <!--[if lt IE 9]>
+      <p>警告 IEは非推奨環境 <a href="https://www.google.com/chrome/">GoogleChrome</a>推奨</p>
+      <![endif]-->
       <h1 id="head-title"><div>EspateOS </div>Let's start with ONE.</h1>
       <nav id="gnav">
         <input type="checkbox" id="gnav-b" name="gnav-b">
