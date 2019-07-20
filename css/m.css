@@ -311,8 +311,16 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
   .main-box3-0{
     display:inline-block;
     height:430px;
-    width:25%;
-    margin:10% 1.4%
+    width:30%;
+    padding:0 .5% 2.5%;
+    margin:10% .5%
+  }
+  .main-box3-0-title{
+    font-size:21px
+  }
+  .main-box3-0-text{
+    font-size:17px;
+    padding:0 2%
   }
 }
 @media screen and (min-width:1280px){
