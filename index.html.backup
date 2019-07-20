@@ -13,22 +13,23 @@
     <link rel="apple-touch-icon-precomposed" href="https://hayao819.wp.xdomain.jp/i/150.png">
     <meta name="msapplication-TileImage" content="https://hayao819.wp.xdomain.jp/i/150.png">
     <meta name="msapplication-TileColor" content="#8bc34a">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../i/16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="../i/32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="../i/48.png" sizes="48x48" type="image/png">
-    <link rel="icon" href="../i/64.png" sizes="64x64" type="image/png">
-    <title>Download - EspateOS - Let's start with ONE.</title>
-    <meta property="og:title" content="Download - EspateOS - Let's start with ONE.">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="i/16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="i/32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="i/48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="i/64.png" sizes="64x64" type="image/png">
+    <title>EspateOS - Let's start with ONE.</title>
+    <meta property="og:title" content="EspateOS - Let's start with ONE.">
     <meta name="description" content="">
     <meta property="og:description" content="">
     <meta property="og:url" content="https://hayao819.wp.xdomain.jp/">
     <link rel="canonical" href="https://hayao819.wp.xdomain.jp/">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/m.css">
+    <link rel="stylesheet" href="css/m.css">
+  
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="../css/ie.css">
+    <link rel="stylesheet" href="/css/ie.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
@@ -56,11 +57,11 @@
         </label>
         <ul id="gnav-ul">
           <li><a href="/">ホーム</a></li>
-          <li><a href="../download/">Download</a></li>
-          <li><a href="../old/">Old</a></li>
+          <li><a href="./download/">Download</a></li>
+          <li><a href="./old/">Old</a></li>
           <li><a href="https://serenelinux.com">Serene</a></li>
           <li><a href="http://serenelinux.html.xdomain.jp">解説サイト</a></li>
-          <li><a href="../about/">About</a></li>
+          <li><a href="./about/">About</a></li>
         </ul>
       </nav>
     </header>
