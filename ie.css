@@ -8,6 +8,7 @@
   color: red;
 }
 #head{
+  position: static;
   left: 0;
   right: 0;
   background-color: #090909;
@@ -26,6 +27,7 @@ min-width: 820px;
 #visual,
 #main,
 #foot{
+  box-sizing: border-box;
   width: 100%;
   max-width: 1024px;
   min-width: 1024px;

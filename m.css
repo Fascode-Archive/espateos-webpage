@@ -109,6 +109,7 @@ body{font-family:'Roboto',sans-serif;}
 #visual{
   display: block;
   height: 900px;
+  background-image: url("i/mo.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
