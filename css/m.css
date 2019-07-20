@@ -21,7 +21,7 @@ abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,d
   opacity:0
 }
 img{display:block;width:100%;vertical-align:top}
-body{font-family:Roboto, Helvetica, Arial, sans-serif}
+body{font-family:Roboto,sans-serif}
 #gnav-b{
   display:none
 }
@@ -264,6 +264,9 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
   background-color:#010101;
   color:#fff
 }
+.foot-link a{
+  color:#136b56
+}
 @media screen and (min-width:480px) and (max-width:599px){
   #gnav-ul{
     top:80px
@@ -356,7 +359,7 @@ body{font-family:Roboto, Helvetica, Arial, sans-serif}
   .main-box3-0{
     display:inline-block;
     width:25%;
-    height:300px;
+    height:350px;
     margin:5% 1.2%
   }
 }
