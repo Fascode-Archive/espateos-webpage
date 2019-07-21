@@ -176,7 +176,7 @@ $notimeupdate = 1;
 // Admin password for this Wikisite
 
 // Default: always fail
-$adminpass = '{x-php-md5}72c7942d5f6cd5b79cfe825153f8513a';
+$adminpass = '{x-php-md5}01f210e753a0eaeb6e5125552c080a6f';
 
 // Sample:
 //$adminpass = 'pass'; // Cleartext
