@@ -56,18 +56,12 @@
           <i class="material-icons">close</i>
         </label>
         <ul id="gnav-ul">
-          <!-- <li><a href="/">ホーム</a></li>
-          <li><a href="./download/">Download</a></li>
-          <li><a href="./old/">Old</a></li>
-          <li><a href="https://serenelinux.com">Serene</a></li>
-          <li><a href="http://serenelinux.html.xdomain.jp">解説サイト</a></li>
-          <li><a href="./about/">About</a></li> -->
           <li><a href="/">Home</a></li>
           <li><a href="../download/">Download</a></li>
           <li><a href="../old/">Old</a></li>
-          <li><a href="../wiki/">wiki</a></li>
           <li><a href="https://serenelinux.com">Serene</a></li>
           <li><a href="../about/">About</a></li>
+          <li><a href="">NoData</a></li>
         </ul>
       </nav>
     </header>
@@ -75,13 +69,57 @@
       <h1 id="visual-title">Download</h1>
     </article>
     <article id="main">
-
+      <h1 id="main-title">EspateOSをダウンロード <div class="bottom-bar"></div> </h1>
+      <section class="download">
+        <p class="download-text">
+          EspateOSをダウンロードできます。
+          ISOイメージファイルを仮想アプライアンス
+          （VirtualBoxでのみ検証）をダウンロード可能です。
+          VirtualBoxで構築する際はゲストマシンに
+          「Guest Additions」をインストールしないでください。
+          （ISOファイルにビルドした際は実機になるため）
+          ISOファイルの整合性をMD5もしくはSHA256で確認することをおすすめします。
+        </p>
+        <div class="download-commit">
+          <p>
+            一言で良いのでコメントをください<br>
+            コメントを送信後ISO等をダウンロードできます。</p>
+          <textarea id="text" name="comment" rows="8" cols="80"></textarea>
+          <button id="ajax" type="button" name="button">送信</button>
+        </div>
+        <div class="download-button">
+          <a href="">Download</a>
+          <p>Release notes, sha256 and md5 and ova are in OSDN.</p>
+        </div>
+      </section>
     </article>
     <i id="go-top" class="no-display material-icons" onclick="scrollToTop()">expand_less</i>
     <footer id="foot"><small>&copy; 2019 EspateOS. </small>
     <span class="foot-link">Powered by <a href="https://twitter.com/naoko1010hh"target="_blank">Naoko</a>.</span>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript">
+    $(function(){
+       $('#ajax').on('click',function(){
+         $.ajax({
+           url:'./q.php',
+           type:'POST',
+           data:{
+             'text':$('#text').val(),"a":"a"
+           }
+         })
+         .done( (data) => {
+           $('.download-commit').slideUp(500);
+           $('.download-button').slideDown(500);
+         })
+         .fail( (data) => {
+           $('.download-commit').slideDown(500);
+           $('.download-button').slideUp(500);
+         })
+         .always( (data) => {
+         });
+       });
+    });
     function scrollToTop() {
       const me = arguments.callee;
       const nowY = window.pageYOffset;

@@ -1,24 +1,68 @@
 <?php
-// PukiWiki - Yet another WikiWikiWeb clone.
-// $Id: index.php,v 1.9 2006/05/13 07:39:49 henoheno Exp $
-// Copyright (C) 2001-2006 PukiWiki Developers Team
-// License: GPL v2 or (at your option) any later version
+/**
+ * Forwarder/Router to doku.php
+ *
+ * In normal usage, this script simply redirects to doku.php. However it can also be used as a routing
+ * script with PHP's builtin webserver. It takes care of .htaccess compatible rewriting, directory/file
+ * access permission checking and passing on static files.
+ *
+ * Usage example:
+ *
+ *   php -S localhost:8000 index.php
+ *
+ * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+ * @author     Andreas Gohr <andi@splitbrain.org>
+ */
+if(php_sapi_name() != 'cli-server') {
+    header("Location: doku.php");
+    exit;
+}
 
-// Error reporting
-//error_reporting(0); // Nothing
-error_reporting(E_ERROR | E_PARSE); // Avoid E_WARNING, E_NOTICE, etc
-//error_reporting(E_ALL); // Debug purpose
+# ROUTER starts below
 
-// Special
-//define('PKWK_READONLY',  1);
-//define('PKWK_SAFE_MODE', 1);
-//define('PKWK_OPTIMISE',  1);
-//define('TDIARY_THEME',   'digital_gadgets');
+# avoid path traversal
+$_SERVER['SCRIPT_NAME'] = str_replace('/../', '/', $_SERVER['SCRIPT_NAME']);
 
-// Directory definition
-// (Ended with a slash like '../path/to/pkwk/', or '')
-define('DATA_HOME',	'');
-define('LIB_DIR',	'lib/');
+# routing aka. rewriting
+if(preg_match('/^\/_media\/(.*)/', $_SERVER['SCRIPT_NAME'], $m)) {
+    # media dispatcher
+    $_GET['media'] = $m[1];
+    require $_SERVER['DOCUMENT_ROOT'] . '/lib/exe/fetch.php';
 
-require(LIB_DIR . 'pukiwiki.php');
-?>
+} else if(preg_match('/^\/_detail\/(.*)/', $_SERVER['SCRIPT_NAME'], $m)) {
+    # image detail view
+    $_GET['media'] = $m[1];
+    require $_SERVER['DOCUMENT_ROOT'] . '/lib/exe/detail.php';
+
+} else if(preg_match('/^\/_media\/(.*)/', $_SERVER['SCRIPT_NAME'], $m)) {
+    # exports
+    $_GET['do'] = 'export_' . $m[1];
+    $_GET['id'] = $m[2];
+    require $_SERVER['DOCUMENT_ROOT'] . '/doku.php';
+
+} elseif($_SERVER['SCRIPT_NAME'] == '/index.php') {
+    # 404s are automatically mapped to index.php
+    if(isset($_SERVER['PATH_INFO'])) {
+        $_GET['id'] = $_SERVER['PATH_INFO'];
+    }
+    require $_SERVER['DOCUMENT_ROOT'] . '/doku.php';
+
+} else if(file_exists($_SERVER['DOCUMENT_ROOT'] . $_SERVER['SCRIPT_NAME'])) {
+    # existing files
+
+    # access limitiations
+    if(preg_match('/\/([\._]ht|README$|VERSION$|COPYING$)/', $_SERVER['SCRIPT_NAME']) or
+        preg_match('/^\/(data|conf|bin|inc)\//', $_SERVER['SCRIPT_NAME'])
+    ) {
+        die('Access denied');
+    }
+
+    if(substr($_SERVER['SCRIPT_NAME'], -4) == '.php') {
+        # php scripts
+        require $_SERVER['DOCUMENT_ROOT'] . $_SERVER['SCRIPT_NAME'];
+    } else {
+        # static files
+        return false;
+    }
+}
+# 404
