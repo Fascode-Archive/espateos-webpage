@@ -153,6 +153,11 @@ body{font-family:Roboto,sans-serif}
 }
 #main-title .bottom-bar::before{left:100%}
 #main-title .bottom-bar::after{right:100%}
+.main-404{
+  font-size: 22px;
+  text-align: center;
+  margin: 30px auto 300px;
+}
 .download{
   text-align: center;
 }
