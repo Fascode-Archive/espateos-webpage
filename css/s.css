@@ -227,6 +227,35 @@ input, button, textarea, select {
   text-decoration: none;
   color: #136b56;
 }
+.about{
+  max-width: 960px;
+  margin: 0 auto;
+}
+.about-title1,
+.about-title2{
+  font-size:23px;
+  line-height:30px;
+  margin: 10px;
+  font-weight:100;
+}
+.about-title1 span{
+  display: inline-block;
+}
+.about-text{
+  margin: 20px 20px 30px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.about-link{
+  margin: 20px;
+  list-style-type: none;
+}
+.about-link li a{
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #136b56;
+}
 
 #go-top{
   line-height:48px;
