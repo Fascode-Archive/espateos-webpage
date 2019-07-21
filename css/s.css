@@ -110,7 +110,7 @@ body{font-family:Roboto,sans-serif}
 #visual{
   display:block;
   height:380px;
-  background-image:url("../i/mv.png");
+  background-image:url("../i/sb.png");
   background-position:center center;
   background-repeat:no-repeat;
   background-size:cover;
@@ -251,21 +251,14 @@ input, button, textarea, select {
 .foot-link a{
   color:#136b56
 }
-
+/*
 @media screen and (min-width:480px) and (max-width:599px){
-  #gnav-ul{
-  }
-  #visual{
-    background-image:url("../i/mv.png")
-  }
 
-}
+
+} */
 @media screen and (min-width:600px) and (max-width:959px){
   #gnav-ul{
     width:100%;
-  }
-  #visual{
-    background-image:url("../i/tv.png")
   }
 }
 @media screen and (min-width:960px) and (max-width:1279px){
@@ -285,9 +278,6 @@ input, button, textarea, select {
     box-sizing:border-box;
     display:inline-block;
     width:16%
-  }
-  #visual{
-    background-image:url("../i/tv.png")
   }
 }
 @media screen and (min-width:1280px){
