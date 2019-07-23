@@ -115,13 +115,13 @@
              $('.download-button').slideDown(500);
              $('.red').text("　");
            }else{
-             $('.download-text.red').text("コメントを記述してください")
+             $('.download-text.red').text("一言でいいのでコメントお願いします。")
            }
          })
          .fail( (data) => {
            $('.download-commit').slideDown(500);
            $('.download-button').slideUp(500);
-           $('.download-text.red').text("コメントを記述してください");
+           $('.download-text.red').text("一言でいいのでコメントお願いします。");
          })
          .always( (data) => {
          });
