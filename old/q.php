@@ -40,6 +40,7 @@ $fromName = "Espate";
 $header = "From: " .mb_encode_mimeheader($fromName) ."<{$fromEmail}>";
 mb_send_mail('naoko561010@gmail.com', $subject, $body, $header);
 mb_send_mail('shun819.mail@gmail.com', $subject, $body, $header);
+echo ("OK");
 }
 }
 function h($str){

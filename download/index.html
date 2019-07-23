@@ -13,11 +13,11 @@
     <link rel="apple-touch-icon-precomposed" href="https://espate.0u0.biz/i/150.png">
     <meta name="msapplication-TileImage" content="https://espate.0u0.biz/i/150.png">
     <meta name="msapplication-TileColor" content="#8bc34a">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="i/16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="i/32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="i/48.png" sizes="48x48" type="image/png">
-    <link rel="icon" href="i/64.png" sizes="64x64" type="image/png">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../i/16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="../i/32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../i/48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="../i/64.png" sizes="64x64" type="image/png">
     <title>Download - EspateOS - Let's start with ONE.</title>
     <meta property="og:title" content="Download - EspateOS - Let's start with ONE.">
     <meta name="description" content="自分だけの完璧なUbuntu。内蔵されているドキュメントで自由にカスタマイズ最小限のユーティリティのみがインストールされているEspateで自分だけの環境を構築しましょう。インストーラーを配布するとも可能です！">
@@ -86,6 +86,7 @@
             コメントを送信後ISO等をダウンロードできます。</p>
           <textarea id="text" name="comment" rows="8" cols="80"></textarea>
           <button id="ajax" type="button" name="button">送信</button>
+          <p class="download-text red" style="color:red;">　</p>
         </div>
         <div class="download-button">
           <a href="">Download</a>
@@ -109,12 +110,18 @@
            }
          })
          .done( (data) => {
-           $('.download-commit').slideUp(500);
-           $('.download-button').slideDown(500);
+           if (data==="OK") {
+             $('.download-commit').slideUp(500);
+             $('.download-button').slideDown(500);
+             $('.red').text("　");
+           }else{
+             $('.download-text.red').text("コメントを記述してください")
+           }
          })
          .fail( (data) => {
            $('.download-commit').slideDown(500);
            $('.download-button').slideUp(500);
+           $('.download-text.red').text("コメントを記述してください");
          })
          .always( (data) => {
          });
