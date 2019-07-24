@@ -9,12 +9,26 @@ Header always set X-XSS-Protection "1; mode=block"
 Header always set X-Content-Type-Options "nosniff"
 Header set Strict-Transport-Security "max-age=315360000; includeSubDomains; preload"
 
+
+AddType text/cache-manifest .appcache
+AddType image/x-icon .ico
+AddType image/svg+xml .svg
+AddType application/x-font-ttf .ttf
+AddType application/x-font-woff .woff
+AddType application/x-font-woff2 .woff2
+AddType application/x-font-opentype .otf
+AddType application/vnd.ms-fontobject .eot
 ExpiresActive On
 ExpiresByType text/css "access plus 1 days"
 ExpiresByType image/gif "access plus 1 weeks"
 ExpiresByType image/jpeg "access plus 1 weeks"
 ExpiresByType image/png "access plus 1 weeks"
 ExpiresByType application/x-javascript "access plus 1 weeks"
+ExpiresByType application/x-font-ttf "access plus 1 year"
+ExpiresByType application/x-font-woff "access plus 1 year"
+ExpiresByType application/x-font-woff2 "access plus 1 year"
+ExpiresByType application/x-font-opentype "access plus 1 year"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
 
 RewriteEngine on
 RewriteCond %{HTTPS} !=on [NC]
