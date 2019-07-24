@@ -10,11 +10,11 @@ Header always set X-Content-Type-Options "nosniff"
 Header set Strict-Transport-Security "max-age=315360000; includeSubDomains; preload"
 
 ExpiresActive On
-ExpiresByType text/css “access plus 1 days”
-ExpiresByType image/gif “access plus 1 weeks”
-ExpiresByType image/jpeg “access plus 1 weeks”
-ExpiresByType image/png “access plus 1 weeks”
-ExpiresByType application/x-javascript “access plus 1 weeks”
+ExpiresByType text/css "access plus 1 days"
+ExpiresByType image/gif "access plus 1 weeks"
+ExpiresByType image/jpeg "access plus 1 weeks"
+ExpiresByType image/png "access plus 1 weeks"
+ExpiresByType application/x-javascript "access plus 1 weeks"
 
 RewriteEngine on
 RewriteCond %{HTTPS} !=on [NC]
